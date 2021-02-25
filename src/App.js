@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// components
+import Header from './components/Common/Header'
+import Footer from './components/Common/Footer'
+import AnimesMain from './components/Anime'
+
+// providers
+import AnimesContextProvider from './contexts/AnimesContext'
+
+import './assets/css/styles.css';
+
+const App = () => (
+  <BrowserRouter>
+    <Header />
+      <Switch>
+        <Route exact path='/' >
+          <AnimesContextProvider>
+            <AnimesMain />
+          </AnimesContextProvider>
+        </ Route>
+      </Switch>
+    <Footer />
+  </BrowserRouter>
+);
+
 
 export default App;

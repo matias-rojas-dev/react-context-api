@@ -1,0 +1,14 @@
+html {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+.root {
+    width: 80%;
+}
+
+
+/* general utils */
+
+.anime
