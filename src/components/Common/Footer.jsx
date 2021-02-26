@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { AppBar, Toolbar } from '@material-ui/core'
 
 const Footer = () => (
-    <h3>Footer</h3>
+
+    <Toolbar className='toolbar'>
+        <h2 className='header-title'>Design for Matías Rojas</h2>
+    </Toolbar>
+
 )
 
 export default Footer;

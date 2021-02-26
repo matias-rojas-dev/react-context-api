@@ -5,7 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Header from './components/Common/Header'
 import Footer from './components/Common/Footer'
 import AnimesMain from './components/Anime'
-
+import notFound from './components/NotFound/notFound'
 // providers
 import AnimesContextProvider from './contexts/AnimesContext'
 
@@ -20,6 +20,7 @@ const App = () => (
             <AnimesMain />
           </AnimesContextProvider>
         </ Route>
+        <Route component={notFound} />
       </Switch>
     <Footer />
   </BrowserRouter>

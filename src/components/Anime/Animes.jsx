@@ -5,7 +5,7 @@ import Anime from './Anime';
 
 const Animes = ({animesList}) => (
     <Fragment>
-        <div className="root">
+        <div className="animeList">
             {
                 
                 animesList.map(anime => {

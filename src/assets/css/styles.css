@@ -1,14 +1,60 @@
 html {
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 20px;
 }
 
-.root {
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+
+/* anime list*/
+
+.animeList {
+    margin: 0 auto;
     width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.header-title {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* footer */
+
+.toolbar {
+    background: rgb(238, 238, 238);
+}
+
+.toolbar .header-title {
+    font-size: 15px;
 }
 
 
 /* general utils */
 
-.anime
+
+/* not found */
+
+.notFound {
+    padding-top: 100px;
+    text-align: center;
+    height: 100vh;
+}
+
+.notFound .notFound-content {
+    margin: 10px;
+}
+
+
+/* header */

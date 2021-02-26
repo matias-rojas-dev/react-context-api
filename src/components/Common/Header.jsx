@@ -1,7 +1,14 @@
-import React from 'react'
+import React from 'react';
+
+// materialui
+import {AppBar, Toolbar} from '@material-ui/core'
 
 const Header = () => (
-    <h3>Header</h3>
+    <AppBar className='header' color='secondary' position='sticky'>
+        <Toolbar>
+            <h2 className='header-title'>Anime API</h2>
+        </Toolbar>
+    </AppBar>
 )
 
 export default Header;
