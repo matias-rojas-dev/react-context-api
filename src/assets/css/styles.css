@@ -58,3 +58,23 @@ img:hover {
 
 
 /* header */
+
+.header-link {
+    text-decoration: none;
+}
+
+
+/*Toggle Button*/
+
+span.MuiToggleButton-label {
+    color: black;
+}
+
+.MuiToggleButton-root {
+    color: black;
+}
+
+.MuiButtonBase-root {
+    background-color: white !important;
+    margin: 10px !important;
+}

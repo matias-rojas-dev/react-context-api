@@ -5,11 +5,10 @@ import {AnimesContext} from './../../contexts/AnimesContext';
 
 // components
 import Animes from '../Anime/Animes'
-import NotFound from './../NotFound/notFound';
 
 
 const AnimesMain = () => {
-    const {doneFetch, animes} = useContext(AnimesContext);
+    const {animes} = useContext(AnimesContext);
 
     return(
         <div>
