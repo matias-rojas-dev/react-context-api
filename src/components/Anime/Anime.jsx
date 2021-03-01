@@ -7,6 +7,9 @@ const Anime = ({ id, synopsis, titleEn, titleJp, image }) => (
         <div className="anime-content">
             <h3 className="title">{titleEn}</h3>
             <h3 className="title">{titleJp}</h3>
+            {
+                synopsis && <p>{synopsis}</p>
+            }
         </div>
 
     </div>

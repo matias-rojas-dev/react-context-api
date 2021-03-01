@@ -4,12 +4,13 @@ const BASE_URL = 'https://kitsu.io/api/edge';
 
 const PAGINATION_GET = '/anime?page[limit]=15';
 
-const FILTER_CATEGORIES = '/anime?filter[categories]';
+const FILTER_ANIME = '/anime?filter[text]=';
+
 
 // get the first 15 anime
 export const principalsAnimes = () => `${BASE_URL}${PAGINATION_GET}`;
 
-export const animeCategories = query => `${BASE_URL}${FILTER_CATEGORIES}=${query}`;
+export const searchAnime = query => `${BASE_URL}${FILTER_ANIME}${query}`;
 
 
 // utils 

@@ -1,22 +1,22 @@
 import React, { createContext, useState, useEffect } from 'react';
 
+// utils
 import { principalsAnimes} from './../constants/index';
 
 export const AnimesContext = createContext();
 
+//create the context
 const AnimesContextProvider = ({children}) => {
     const [doneFetch, setDoneFetch] = useState();
     const [animes, setAnimes] = useState([]);
-    //const [hits, setHits] = useState();
 
     useEffect(() => getPrincipalsAnimes(), []);
-    //useEffect(() => getAnimeWithCategories(), []);
 
 
     // function to get the first 15 animes
     const getPrincipalsAnimes = () => { 
         fetch(principalsAnimes())
-            .then( responde => responde.json())
+            .then( res => res.json())
             .then((data) => {
                 setDoneFetch(true);
                 setAnimes(data.data);
@@ -25,16 +25,6 @@ const AnimesContextProvider = ({children}) => {
             })
             .catch((err)  => console.log(err))
     };
-/*
-
-    // function to filter animes at categories
-    const getAnimeWithCategories = (query) => {
-        query && fetch(animeCategories(query))
-            .then((data) => data.json())
-            .then((res) => setHits(res.hits))
-            .catch((err) => console.log(err))
-    } */
-
 
 
     return(

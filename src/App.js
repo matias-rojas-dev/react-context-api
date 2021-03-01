@@ -7,11 +7,9 @@ import Footer from './components/Common/Footer'
 import AnimesMain from './components/Anime'
 import notFound from './components/NotFound/notFound'
 import SearchAnime from './components/Anime/SearchAnime'
-import Layout from './components/Common/Layout';
-
 // providers
 import AnimesContextProvider from './contexts/AnimesContext'
-import AnimeSearchContextProvider from './contexts/AnimeSearchContext'
+import SearchContext from './contexts/SearchContext'
 
 import './assets/css/styles.css';
 
@@ -25,10 +23,10 @@ const App = () => (
         </AnimesContextProvider>
       </ Route>
 
-      <Route path='/search'>
-        <AnimeSearchContextProvider>
+      <Route>
+        <SearchContext>
           <SearchAnime />
-        </AnimeSearchContextProvider>
+        </SearchContext>
       </Route>
 
       <Route component={notFound} />

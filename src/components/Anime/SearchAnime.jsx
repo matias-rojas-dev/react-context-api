@@ -1,17 +1,28 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
+import React,{Fragment, useContext} from 'react';
 
-// import material-ui
-import ToggleButton from '@material-ui/lab/ToggleButton';
-import {Grid, Paper} from '@material-ui/core';
+import {SearchContext} from './../../contexts/SearchContext';
 
-// import from utils
-import {predefinedCategories} from './../../constants/index';
+import Title from './../Common/Title';
+import AnimeFound from './AnimeFound'
+import NotFound from './../NotFound/notFound'
+import BuscaAnime from './BuscaAnime'
 
-// components
+const SearchAnime = () => {
 
+    const {initialQuery, doneFetch, element, validateQuery} = useContext(SearchContext);
 
-const SearchAnime = () => (
-<h1>KSAFDJAKSJFKAS</h1>
-)
+    return(
+        <Fragment>
+            <Title title={'Search Anime'} />
+            <BuscaAnime validateQuery={validateQuery} />
+            {
+                doneFetch ? 
+                    (element.length ? <AnimeFound element={element}/> : <h1>Hola</h1>  )
+                : <h1>Hola</h1>
+                }
+            
+        </Fragment>
+    )
+    }
+
 export default SearchAnime;

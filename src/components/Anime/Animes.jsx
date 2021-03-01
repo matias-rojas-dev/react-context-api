@@ -12,13 +12,11 @@ const Animes = ({animesList}) => (
                     const {id, attributes} = anime ;
 
                     return (
-                        <Anime
+                        <Anime 
                             key = {id}
-                            synopsis = {attributes.synopsis}
                             titleEn = {attributes.titles.en}
                             titleJp = {attributes.titles.ja_jp}
                             image = {attributes.posterImage.medium}
-
                         />
                     )
                 })
