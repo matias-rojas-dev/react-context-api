@@ -8,13 +8,18 @@ import Title from './../Common/Title'
 import Animes from '../Anime/Animes'
 
 
+import ProgressBar from './../Common/ProgressBar'
 const AnimesMain = () => {
-    const {animes} = useContext(AnimesContext);
+    const {doneFetch, animes} = useContext(AnimesContext);
 
     return(
         <div>
             <Title title='Welcome to Anime API'/>
-            <Animes animesList={animes} />
+            {
+                doneFetch ? 
+                    (animes.length ? <Animes animesList={animes} /> : <ProgressBar />)
+                    :   <ProgressBar />
+            }
         </div>
     )
 }

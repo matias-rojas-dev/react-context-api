@@ -6,7 +6,7 @@ import Anime from './Anime';
 
 const AnimeFound = ({ element }) => (
     <Fragment>
-        <div className="root">
+        <div className="animeList">
             <Grid container spacing={3} justify="center">
                 {
                     element.map(animeElement => {
@@ -21,6 +21,7 @@ const AnimeFound = ({ element }) => (
                                 titleEn={attributes.titles.en}
                                 titleJp={attributes.titles.ja_jp}
                                 image={attributes.posterImage.medium}
+                                synopsis={attributes.synopsis}
                             />
 
                         );

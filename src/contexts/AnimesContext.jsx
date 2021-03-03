@@ -1,14 +1,16 @@
 import React, { createContext, useState, useEffect } from 'react';
 
 // utils
-import { principalsAnimes} from './../constants/index';
+import { principalsAnimes, searchAnime} from './../constants/index';
 
 export const AnimesContext = createContext();
 
 //create the context
 const AnimesContextProvider = ({children}) => {
     const [doneFetch, setDoneFetch] = useState();
+    const [initialQuery, setInitialQuery] = useState("")
     const [animes, setAnimes] = useState([]);
+    
 
     useEffect(() => getPrincipalsAnimes(), []);
 
@@ -25,7 +27,7 @@ const AnimesContextProvider = ({children}) => {
             })
             .catch((err)  => console.log(err))
     };
-
+    
 
     return(
         <AnimesContext.Provider value={{doneFetch, animes}} >

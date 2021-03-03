@@ -1,4 +1,5 @@
 // api constants
+const cors_anywhere = 'https://cors-anywhere.herokuapp.com/';
 
 const BASE_URL = 'https://kitsu.io/api/edge';
 
@@ -8,9 +9,9 @@ const FILTER_ANIME = '/anime?filter[text]=';
 
 
 // get the first 15 anime
-export const principalsAnimes = () => `${BASE_URL}${PAGINATION_GET}`;
+export const principalsAnimes = () => `${cors_anywhere}${BASE_URL}${PAGINATION_GET}`;
 
-export const searchAnime = query => `${BASE_URL}${FILTER_ANIME}${query}`;
+export const searchAnime = query => `${cors_anywhere}${BASE_URL}${FILTER_ANIME}${query}`;
 
 
 // utils 

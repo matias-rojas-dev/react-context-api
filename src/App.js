@@ -6,10 +6,10 @@ import Header from './components/Common/Header'
 import Footer from './components/Common/Footer'
 import AnimesMain from './components/Anime'
 import notFound from './components/NotFound/notFound'
-import SearchAnime from './components/Anime/SearchAnime'
+import SearchAnime from './components/AnimeSearch'
 // providers
 import AnimesContextProvider from './contexts/AnimesContext'
-import SearchContext from './contexts/SearchContext'
+import SearchContextProvider from './contexts/SearchContext'
 
 import './assets/css/styles.css';
 
@@ -22,12 +22,11 @@ const App = () => (
           <AnimesMain />
         </AnimesContextProvider>
       </ Route>
-
-      <Route>
-        <SearchContext>
+      <Route exact path='/search' >
+        <SearchContextProvider>
           <SearchAnime />
-        </SearchContext>
-      </Route>
+        </SearchContextProvider>
+      </ Route>
 
       <Route component={notFound} />
     </Switch>

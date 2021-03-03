@@ -12,6 +12,11 @@ img:hover {
     cursor: pointer;
 }
 
+.progressBar {
+    text-align: center;
+    margin: 20px;
+}
+
 
 /* anime list*/
 
@@ -32,6 +37,13 @@ img:hover {
 .title {
     margin: 20px 0;
     width: 100%;
+    text-align: center;
+}
+
+.anime-section {
+    width: 30%;
+    border: 1px solid black;
+    margin: 2px;
     text-align: center;
 }
 

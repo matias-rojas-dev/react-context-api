@@ -11,8 +11,8 @@ import SearchIcon from '@material-ui/icons/Search'; //https://material-ui.com/es
 const BuscaAnime = ({validateQuery}) => (
     <Paper className="paper defaultPaper">
         <TextField
-            id="q_track"
-            label="Track"
+            id="query"
+            label="Anime"
             margin="normal"
             variant="outlined"
             onKeyPress={e => validateQuery(e)}
