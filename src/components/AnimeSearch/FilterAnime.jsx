@@ -8,19 +8,19 @@ import SearchIcon from '@material-ui/icons/Search'; //https://material-ui.com/es
 
 
   
-const BuscaAnime = ({validateQuery}) => (
+const FilterAnime = ({validateQuery}) => (
     <Paper className="paper defaultPaper">
         <TextField
             id="query"
             label="Anime"
             margin="normal"
-            variant="outlined"
+            variant="standard"
             onKeyPress={e => validateQuery(e)}
         />
-        <IconButton color="primary" onClick={e => validateQuery(e)}>
+        <IconButton color="secondary" size="medium" onClick={e => validateQuery(e)}>
             <SearchIcon />
         </IconButton>
     </Paper>
 )
 
-export default BuscaAnime;
+export default FilterAnime;

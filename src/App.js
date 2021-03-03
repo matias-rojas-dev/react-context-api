@@ -7,10 +7,12 @@ import Footer from './components/Common/Footer'
 import AnimesMain from './components/Anime'
 import notFound from './components/NotFound/notFound'
 import SearchAnime from './components/AnimeSearch'
+
 // providers
 import AnimesContextProvider from './contexts/AnimesContext'
 import SearchContextProvider from './contexts/SearchContext'
 
+// utils
 import './assets/css/styles.css';
 
 const App = () => (
@@ -27,7 +29,6 @@ const App = () => (
           <SearchAnime />
         </SearchContextProvider>
       </ Route>
-
       <Route component={notFound} />
     </Switch>
     <Footer />

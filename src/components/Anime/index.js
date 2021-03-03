@@ -6,10 +6,10 @@ import {AnimesContext} from './../../contexts/AnimesContext';
 // components
 import Title from './../Common/Title'
 import Animes from '../Anime/Animes'
-
-
 import ProgressBar from './../Common/ProgressBar'
+
 const AnimesMain = () => {
+    
     const {doneFetch, animes} = useContext(AnimesContext);
 
     return(

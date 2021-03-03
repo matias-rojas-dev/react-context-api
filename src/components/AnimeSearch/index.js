@@ -1,22 +1,22 @@
 import React,{Fragment, useContext} from 'react';
 
+// import the context
 import {SearchContext} from './../../contexts/SearchContext';
 
+// components
 import Title from './../Common/Title';
-import AnimeFound from './../Anime/AnimeFound'
-import NotFound from './../NotFound/notFound'
-import BuscaAnime from './../Anime/BuscaAnime'
 import ProgressBar from './../Common/ProgressBar'
+import AnimeFound from './../AnimeSearch/AnimeFound'
+import FilterAnime from './../AnimeSearch/FilterAnime'
 
 const SearchAnime = () => {
 
     const {doneFetch, element, validateQuery} = useContext(SearchContext);
-    console.log(doneFetch);
-    console.log(element.length)
+
     return(
         <Fragment>
             <Title title={'Search Anime'} />
-            <BuscaAnime validateQuery={validateQuery} />
+            <FilterAnime validateQuery={validateQuery} />
             {
                 doneFetch ? 
                     (element.length ? <AnimeFound element={element}/> : <h2></h2>  )

@@ -2,7 +2,9 @@ import React, { Fragment } from 'react';
 
 // imports from material-ui
 import Grid from '@material-ui/core/Grid';
-import Anime from './Anime';
+
+// components
+import Anime from './../Anime/Anime';
 
 const AnimeFound = ({ element }) => (
     <Fragment>

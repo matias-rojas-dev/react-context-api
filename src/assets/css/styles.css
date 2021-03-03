@@ -1,3 +1,5 @@
+/*Generals classes*/
+
 html {
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,31 +10,17 @@ html {
     margin: 0;
 }
 
-img:hover {
-    cursor: pointer;
+img {
+    display: block;
+    margin: auto;
 }
 
-.progressBar {
-    text-align: center;
-    margin: 20px;
+a {
+    text-decoration: none;
 }
 
 
-/* anime list*/
-
-.animeList {
-    margin: 0 auto;
-    width: 80%;
-    padding: 20px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-.header-title {
-    width: 100%;
-    text-align: center;
-}
+/*Littles classes*/
 
 .title {
     margin: 20px 0;
@@ -40,15 +28,24 @@ img:hover {
     text-align: center;
 }
 
-.anime-section {
-    width: 30%;
-    border: 1px solid black;
-    margin: 2px;
+.header-title {
+    width: 100%;
     text-align: center;
 }
 
+.anime-section {
+    border: .5px solid white;
+}
 
-/*Paper*/
+.progressBar {
+    text-align: center;
+    margin: 20px;
+}
+
+.animeList {
+    margin: 50px 0;
+    width: 100%;
+}
 
 .paper {
     padding: 16px;
@@ -56,22 +53,24 @@ img:hover {
     color: rgba(0, 0, 0, 0.54) !important;
 }
 
-
-/* footer */
-
 .toolbar {
     background: rgb(238, 238, 238);
 }
 
-.toolbar .header-title {
-    font-size: 15px;
+.principal {
+    font-size: 30px;
+}
+
+.synopsis {
+    text-align: justify;
+}
+
+.anime-content {
+    padding-left: 33px
 }
 
 
-/* general utils */
-
-
-/* not found */
+/* Not found */
 
 .notFound {
     padding-top: 100px;
@@ -84,17 +83,11 @@ img:hover {
 }
 
 
-/* header */
-
-.header-link {
-    text-decoration: none;
-}
-
-
-/*Toggle Button*/
+/* Changes for material-ui classes */
 
 span.MuiToggleButton-label {
     color: black;
+    text-decoration: none;
 }
 
 .MuiToggleButton-root {
@@ -104,4 +97,21 @@ span.MuiToggleButton-label {
 .MuiButtonBase-root {
     background-color: white !important;
     margin: 10px !important;
+}
+
+.MuiGrid-container {
+    padding: 100px;
+}
+
+.MuiGrid-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-right: 0%;
+}
+
+.MuiGrid-spacing-xs-3 {
+    margin: -27px !important;
 }

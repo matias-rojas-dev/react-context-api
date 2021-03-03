@@ -1,12 +1,15 @@
 import React, {Fragment} from 'react'
+
+// material-ui
 import Grid from '@material-ui/core/Grid'
+
 //components
 import Anime from './Anime';
 import Title from '../Common/Title';
 
 const Animes = ({animesList}) => (
     <Fragment>
-        <Title title={'Anime founds'} />
+        <Title title={'アニメ'} />
         <div className="animeList">
             <Grid container spacing={3} justicy="center">
             {

@@ -1,5 +1,9 @@
 import React from 'react';
+
+// material-ui
 import {Button} from '@material-ui/core';
+
+// utils
 import {notFoundGif} from './../../constants/index';
 
 const NotFound = () => (
@@ -8,7 +12,7 @@ const NotFound = () => (
         <h1>404: Not found </h1>
         <Button href="/" className=''>Back home</Button>
         </div>
-        <img src={notFoundGif} width='300' />
+        <img src={notFoundGif} alt='Not Found' width='300' />
     </div>
 );
 
